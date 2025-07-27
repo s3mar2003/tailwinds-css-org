@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="منظمة أجيال بلا قات - نحو مجتمع صحي ومبدع خالٍ من القات">
+  <title>أجيال بلا قات | الرئيسية</title>
+  <link rel="icon" href="image/logo2.png" type="image/x-icon">
+  <link href="/src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-[var(--color-bg)] text-[var(--color-text)]">
+  <!-- header -->
+ <header role="banner" class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)] shadow-[var(--shadow-default)] transition-all duration-300">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+    <!--  logo  -->
+    <a href="index.html" class="flex items-center">
+        <img src="image/logo2.png" alt="شعار أجيال بلا قات" class="h-20 w-auto transition-transform duration-300 hover:scale-105 rounded-full">
+    </a>
+
+    <!-- menu icon   -->
+    <button id="mobileMenuButton" class="md:hidden text-[var(--color-primary)] p-2" aria-label="فتح القائمة">
+        <i class="fas fa-bars text-2xl"></i>
+    </button>
+
+    <!--  nav bar  -->
+    <div class="hidden md:flex flex-1 justify-center">
+        <nav id="desktopMenu" class="transition-all duration-300">
+            <ul class="flex gap-8 list-none p-0 m-0">
+                <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                <li><a href="about.html" class="nav-link">من نحن</a></li>
+                <li><a href="project.html" class="nav-link">المشاريع</a></li>
+                <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+            </ul>
+        </nav>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+         <div class="relative">
+             <input type="search" id="searchInput" placeholder="ابحث هنا..." 
+                    class="pr-10 pl-4 py-2 border border-[var(--color-border)] rounded-lg bg-[var(--color-bg)] text-[var(--color-text)]">
+             <button class="absolute left-3 top-1/2 transform -translate-y-1/2 text-[var(--color-gray-dark)]">
+                 <i class="fas fa-search"></i>
+             </button>
+         </div>
+         <button id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+         <button id="langToggle" aria-label="تغير اللغة">EN</button>
+     </div>
+ </div>
+        <!--   menu nav -->
+        <nav id="mobileMenu" class="hidden w-full md:hidden bg-[var(--color-bg)] shadow-lg">
+            <ul class="flex flex-col gap-4 list-none p-4 m-0">
+                <li><a href="index.html" class="nav-link active block px-4 py-2 hover:bg-[var(--color-gray-light)]">الرئيسية</a></li>
+                <li><a href="about.html" class="nav-link block px-4 py-2 hover:bg-[var(--color-gray-light)]">من نحن</a></li>
+                <li><a href="project.html" class="nav-link block px-4 py-2 hover:bg-[var(--color-gray-light)]">المشاريع</a></li>
+                <li><a href="contact.html" class="nav-link block px-4 py-2 hover:bg-[var(--color-gray-light)]">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <main role="main" aria-label="المحتوى الرئيسي" class="pt-24">
+    <!-- Hero Banner  -->
+<section class="hero-banner relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[85vh] flex items-center justify-center bg-gradient-to-b from-white via-green-100  to-[var(--color-primary)]">
+  <div class="container relative z-10 text-center px-4 sm:px-6">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5text-[var(--c--color-gray-dark)] ">
+      نحو مجتمع صحي خالٍ من القات
+    </h1>
+    <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-[var(--c--color-gray-dark)] px-2 sm:px-4">
+      نعمل معًا لبناء أجيال واعية ومبدعة بعيدة عن تأثيرات القات
+    </p>
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+      <a href="#about" class="btn px-4 py-1 sm:px-5 sm:py-2 md:px-6 md:py-2 lg:px-8 lg:py-3">
+        تعرف علينا
+      </a>
+      <a href="#projects" class="btn btn-secondary px-4 py-1 sm:px-5 sm:py-2 md:px-6 md:py-2 lg:px-8 lg:py-3">
+        مشاريعنا
+      </a>
+    </div>
+  </div>
+</section>
+    <!-- About Section -->
+    <section id="about" class="py-16 ">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-2">من نحن</h2>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <div class="lg:w-1/2 ">
+            <p class="mb-4">نحن منظمة "أجيال بلا قات"، مبادرة شبابية تأسست عام 2018 بهدف التوعية بمخاطر القات وتأثيره السلبي على الفرد والمجتمع.</p>
+    <p class="mb-8">نعمل من خلال برامج توعوية وتدريبية وتأهيلية لخلق بدائل إيجابية عن تعاطي القات، مع التركيز على فئة الشباب والأطفال.</p>
+    
+    <div class="flex flex-wrap gap-30 mb-6">
+      <div class="text-center">
+        <span class="block text-3xl font-bold text-[var(--color-primary)]">5+</span>
+        <span class="text-[var(--color-text)]">سنوات خبرة</span>
+      </div>
+      <div class="text-center">
+        <span class="block text-3xl font-bold text-[var(--color-primary)]">50+</span>
+        <span class="text-[var(--color-text)]">مشروع ناجح</span>
+      </div>
+      <div class="text-center">
+        <span class="block text-3xl font-bold text-[var(--color-primary)]">1000+</span>
+        <span class="text-[var(--color-text)]">مستفيد</span>
+      </div>
+    </div>
+    
+    <a href="about.html" class="btn btn-secondary ">المزيد عنا</a>
+  </div>
+  
+  <div class="lg:w-1/2">
+<div class="relative pt-[56.25%] rounded-lg shadow-[var(--shadow-default)] overflow-hidden">
+  <img src="image/banar.webp" alt="فريق أجيال بلا قات" 
+       class="absolute top-0 left-0 w-full h-full object-cover">
+</div>          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-[var(--color-gray-light)]">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-2">مشاريعنا</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- project 1 -->
+    <article class="card">
+      <div class="relative overflow-hidden rounded-t-lg">
+        <img src="image/project3.webp" alt="مشروع بناء المدرسة" class="w-full h-64 object-cover" loading="lazy">
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">افتتاح مبنى مدرسة ابن خلدون الجديد بمحافظة لحج</h3>
+        <p class="mb-4">إنشاء فصول دراسية متكاملة في مديرية المضاربة ورأس العارة بمحافظة لحج.</p>
+        <div class="flex justify-between text-sm text-[var(--color-gray-dark)]">
+          <span><i class="fas fa-map-marker-alt ml-1"></i> لحج اليمن</span>
+          <span><i class="fas fa-users ml-1"></i> 500+ مستفيد</span>
+        </div>
+      </div>
+    </article>
+    
+    <!-- project 2 -->
+    <article class="card">
+            <div class="relative overflow-hidden rounded-t-lg">
+       <img src="image/project1.webp" alt=" مشروع إنارة شوارع" class="w-full h-64 object-cover" loading="lazy">
+     </div>
+     <div class="p-6">
+       <h3 class="text-xl font-bold mb-2">مشروع إنارة شوارع مديريتي القاهرة والمظفر بتعز بالطاقة الشمسية</h3>
+       <p class="mb-4">تركيب 425 وحدة إنارة شمسية و27 عمود جديد مع صيانة الأعمدة القائمة.</p>
+       <div class="flex justify-between text-sm text-[var(--color-gray-dark)]">
+         <span><i class="fas fa-map-marker-alt ml-1"></i> تعز اليمن</span>
+         <span><i class="fas fa-users ml-1"></i> 200+ مستفيد</span>
+       </div>
+     </div>
+   </article>
+   
+   <!-- project 3 -->
+   <article class="card">
+     <div class="relative overflow-hidden rounded-t-lg">
+       <img src="image/project5.jpeg" alt=" دور المرأة وقيادتها في الاستجابة الإنسانية " class="w-full h-64 object-cover" loading="lazy">
+     </div>
+            <div class="p-6">
+      <h3 class="text-xl font-bold mb-2">أجيال بلا قات تنظم ندوة بعنوان "دور المرأة وقيادتها في الاستجابة الإنسانية" في تعز</h3>
+      <p class="mb-4">ندوة لتعزيز مشاركة المرأة في الإغاثة والإنعاش والسلام في تعز</p>
+      <div class="flex justify-between text-sm text-[var(--color-gray-dark)]">
+        <span><i class="fas fa-map-marker-alt ml-1"></i> تعز اليمن</span>
+        <span><i class="fas fa-users ml-1"></i> 60+ مستفيد</span>
+      </div>
+    </div>
+  </article>
+</div>
+      </div>
+    </section>
+
+    <!-- قسم اراء المستفيدين -->
+    <section class="opinion-section py-16 bg-[var(--color-bg)]">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-2">آراء المستفيدين</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!--  1 -->
+    <div class="card">
+      <div class="p-6 mb-4 relative">
+        <div class="text-4xl text-[var(--color-primary)] absolute top-0 right-0">"</div>
+        <p class="mt-6">
+          بعد مشاركتي في برنامج التوعية المدرسية، أصبحت أكثر وعياً بمخاطر القات
+          وأستطيع الآن تقديم النصح لأصدقائي وعائلتي. شكراً لكم على هذه الفرصة.
+        </p>
+      </div>
+      <div class="flex items-center p-6 border-t border-[var(--color-border)]">
+   <img src="image/profail2.jfif" alt="عمر عبدالله" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+   <div>
+     <h4 class="font-bold">عمر عبدالله</h4>
+     <p class="text-sm text-[var(--color-gray-dark)]">طالب - مشروع التوعية المدرسية</p>
+     <div class="text-yellow-400 mt-1">
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+     </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--  2 -->
+    <div class="card">
+      <div class="p-6 mb-4 relative">
+        <div class="text-4xl text-[var(--color-primary)] absolute top-0 right-0">"</div>
+   <p class="mt-6">
+           مشروع تمكين المرأة غير حياتي تماماً، تعلمت حرفة جديدة وأصبح لدي مصدر دخل
+           يساعدني في إعالة أسرتي بعد وفاة زوجي. جزاكم الله خيراً.
+     </p>
+   </div>
+   <div class="flex items-center p-6 border-t border-[var(--color-border)]">
+     <img src="image/profail.jfif" alt="سمية محمد" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+     <div>
+       <h4 class="font-bold">سمية محمد</h4>
+       <p class="text-sm text-[var(--color-gray-dark)]">مستفيدة - مشروع تمكين المرأة</p>
+    <div class="text-yellow-400 mt-1">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+  </div>
+     </div>
+   </div>
+   
+   <!--  3 -->
+   <div class="card">
+     <div class="p-6 mb-4 relative">
+       <div class="text-4xl text-[var(--color-primary)] absolute top-0 right-0">"</div>
+       <p class="mt-6">
+         بعد تحويلي مزرعتي من القات إلى الفواكه، زاد دخلي بنسبة 40% وأصبحت
+         منتجاتي مطلوبة في السوق المحلي. نادم أنني لم أفعل هذا من قبل.
+       </p>
+     </div>
+     <div class="flex items-center p-6 border-t border-[var(--color-border)]">
+       <img src="image/profail2.jfif" alt="أحمد علي" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+   <div>
+     <h4 class="font-bold">أحمد علي</h4>
+     <p class="text-sm text-[var(--color-gray-dark)]">مزارع - مشروع الزراعة البديلة</p>
+     <div class="text-yellow-400 mt-1">
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+         </div>
+       </div>
+     </div>
+   </div>
+        </div>
+      </div>
+    </section>
+
+    <!--contact us -->
+    <section class="cta-section py-16 bg-[var(--color-primary)] text-white">
+      <div class="container text-center">
+        <h2 class="text-3xl font-bold mb-4">كن جزءًا من التغيير</h2>
+        <p class="text-xl mb-8">ساهم معنا في بناء مجتمع صحي خالٍ من القات عبر التطوع أو الدعم</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="btn bg-white text-[var(--color-primary)] hover:bg-[var(--color-gray-light)]">انضم إلينا</a>
+          <a href="contact.html#donate" class="btn btn-secondary border-white text-white hover:bg-white hover:text-[var(--color-primary)]">ادعمنا</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer role="contentinfo" class="bg-[var(--color-primary)] text-white py-12">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div class="footer-about">
+      <img src="image/logo2 (3).png" alt="شعار أجيال بلا قات" class="h-24 mb-4">
+      <p class="mb-4">منظمة مجتمعية تعمل على التوعية بمخاطر القات وتقديم بدائل إيجابية للشباب والمجتمع</p>
+      <div class="flex gap-4">
+        <a href="#" aria-label="فيسبوك" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-teal-800 hover:text-[var(--color-primary)] transition-colors duration-200">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="تويتر" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-teal-800 hover:text-[var(--color-primary)] transition-colors duration-200">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="إنستغرام" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-teal-800 hover:text-[var(--color-primary)] transition-colors duration-200">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" aria-label="يوتيوب" class="w-10 h-10 flex items-center justify-center bg-white rounded-full hover:bg-teal-800 hover:text-[var(--color-primary)] transition-colors duration-200">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+    
+        <div class="footer-links">
+          <h3 class="text-xl font-bold mb-4">روابط سريعة</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:underline">الرئيسية</a></li>
+            <li><a href="about.html" class="hover:underline">من نحن</a></li>
+            <li><a href="project.html" class="hover:underline">المشاريع</a></li>
+            <li><a href="contact.html" class="hover:underline">اتصل بنا</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
+          <div class="space-y-2">
+            <p class="flex items-center"><i class="fas fa-map-marker-alt ml-2"></i> اليمن تعز - (الفرع الرئيسي) - شارع الأجينات.</p>
+            <p class="flex items-center"><i class="fas fa-globe ml-2"></i> www.gwq-ye.org</p>
+            <p class="flex items-center"><i class="fas fa-envelope ml-2"></i> info@aghalblaqat.org</p>
+          </div>
+        </div>
+        
+        <div class="footer-newsletter">
+          <h3 class="text-xl font-bold mb-4">النشرة البريدية</h3>
+          <p class="mb-4">اشترك ليصلك كل جديد عن أنشطتنا وبرامجنا</p>
+          <form class="flex flex-col sm:flex-row gap-2 ">
+            <input type="email" placeholder="بريدك الإلكتروني" required class="flex-1 px-4 py-2 rounded text-[var(--color-bg)] border-1">
+            <button type="submit" class="btn bg-white text-[var(--color-primary)] hover:bg-[var(--color-gray-light)]">اشتراك</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="copyright">&copy; 2025 أجيال بلا قات. جميع الحقوق محفوظة.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">سياسة الخصوصية</a>
+          <a href="#" class="hover:underline">شروط الاستخدام</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+
+
+</body>
+</html>

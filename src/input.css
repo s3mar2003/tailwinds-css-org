@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+@tailwind utilities;
+
+
+
+@layer base {
+  /* تعريف المتغيرات في :root للوضع الفاتح */
+  :root {
+    --color-primary: #007b8f;
+    --color-primary-hover: #005f6e;
+    --color-secondary: #00c2d3;
+    --color-text: #333333;
+    --color-bg: #ffffff;
+    --color-border: #dddddd;
+    --color-gray-light: #f2f2f2;
+    --color-gray-dark: #666666;
+    --color-overlay: rgba(0, 0, 0, 0.1);
+    --shadow-default: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* الوضع الداكن */
+  [data-theme="dark"] {
+    --color-primary: #00c2d3;
+    --color-primary-hover: #008ea0;
+    --color-text: #e0e0e0;
+    --color-bg: #121212;
+    --color-border: #444444;
+    --color-gray-light: #2a2a2a;
+    --color-gray-dark: #999999;
+    --shadow-default: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  /* تطبيق المتغيرات على العناصر الأساسية */
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans;
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[var(--color-primary)] mt-0 leading-tight;
+  }
+
+  a {
+    @apply text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* الأزرار */
+  .btn {
+    @apply bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] 
+           text-white px-6 py-3 rounded-full transition-all duration-200
+           text-base font-medium;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-[var(--color-primary)] 
+           text-[var(--color-primary)] hover:bg-[var(--color-primary)] 
+           hover:text-white;
+  }
+
+  /* الحاويات */
+  .container {
+    @apply w-[90%] max-w-6xl mx-auto py-4 px-4;
+  }
+
+  /* الكروت */
+  .card {
+    @apply bg-[var(--color-bg)] border border-[var(--color-border)] 
+           rounded-lg shadow-[var(--shadow-default)] p-6;
+  }
+
+  /* التنقل */
+  .nav-link {
+    @apply block py-2 text-[var(--color-text)] hover:text-[var(--color-primary)] 
+           font-semibold text-lg relative after:content-[''] after:absolute 
+           after:bottom-0 after:right-0 after:w-full after:h-0.5 
+           after:bg-[var(--color-primary)] after:opacity-0 
+           hover:after:opacity-100 after:transition-opacity after:duration-300;
+  }
+
+  .nav-link.active {
+    @apply text-[var(--color-primary)] after:opacity-100;
+  }
+}
+
+/* تأثيرات القائمة المتنقلة */
+.mobile-menu {
+  @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.mobile-menu.open {
+  @apply max-h-screen py-4;
+}
